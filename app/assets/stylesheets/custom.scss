@@ -132,12 +132,20 @@ aside {
       margin-top: 0px;
     }
   }
+  .user_data {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+  }
 }
 
 .gravatar {
   float: left;
   margin-right: 10px;
 }
+
+
 
 /*  microposts */
 
@@ -183,5 +191,25 @@ span.picture {
   margin-top: 10px;
   input {
     border: 0;
+  }
+}
+
+/*  users */
+
+.users {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 5px 0 45px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
   }
 }
