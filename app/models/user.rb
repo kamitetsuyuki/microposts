@@ -19,20 +19,19 @@ class User < ActiveRecord::Base
                                     dependent:   :destroy
   has_many :follower_users, through: :follower_relationships, source: :follower
   
-  #ほかのユーザーをフォローする
+   #他のユーザーをフォローする
   def follow(other_user)
     following_relationships.find_or_create_by(followed_id: other_user.id)
   end
-  
-  # フォローしているユーザーをアンフォローする
+
+  #フォローしているユーザーをアンフォローする
   def unfollow(other_user)
-    following_relationship = following_relationships.find_by(followed_id* other_user.id)
+    following_relationship = following_relationships.find_by(followed_id: other_user.id)
     following_relationship.destroy if following_relationship
   end
-  
+
   # あるユーザーをフォローしているかどうか？
   def following?(other_user)
     following_users.include?(other_user)
   end
- 
 end
