@@ -7,7 +7,7 @@
 <div class="user_data">
   <p>-infomation-</p>
   <ul>
-    <% if @user = current_user %>
+    <% if @user == current_user %>
       <li>email : <%= @user.email %></li>
       <li>location : <%= @user.location %></li>
       <% end %>

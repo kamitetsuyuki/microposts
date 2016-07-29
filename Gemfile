@@ -46,6 +46,8 @@ group :development do
   gem 'spring'
   
   gem 'faker'
+  
+  gem 'kaminari'
 
 end
 
